@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://kit.fontawesome.com/b04ac2903a.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet" />
+    <title>Giỏ Hàng</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html"><img style="width: 200px" src="image/controllerLogo.png" alt="" class="logo"></a>
+            <nav>
+                <ul class="links">
+                    <li><input type="text"><i class="fa-solid fa-magnifying-glass" style="color: #15e6b2"></i></li>
+                    <li><a class="active" href="cart.html">Giỏ hàng</a><i class="fa-solid fa-cart-shopping" style="color: #15e6b2"></i></li>
+                    <li><a href="store.html">Cửa hàng</a></li>
+                    <li><a href="login.html">Tài khoản</a></li>
+                    <li><a href="descriptionpage.html">Thông tin cửa hàng</a></li>
+                </ul>
+            </nav> 
+            <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="cart.html">Giỏ hàng</a><i class="fa-solid fa-cart-shopping" style="color: #15e6b2"></i></li>
+            <li><a href="order-history.html">Lịch sử đơn hàng</a></li>
+            <li><a href="login.html">Tài khoản</a></li>
+            <li><a href="descriptionpage.html">Thông tin cửa hàng</a></li>
+        </div>
+    </header>
+    <div class="container">
+    <div class="banner">
+        <div class="small-container cart-page">
+            <table>
+                <tr>
+                    <th>Sản Phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info" id="remove">
+                            <img src="image/productdetail/nanoleaf3detail.jpg">
+                            <div>
+                                <p>Tên sản phẩm</p>
+                                <small>Giá : 5.650.000Đ</small>
+                            </div>
+                        
+                        <div class="remove-item">
+                            <a href="">Xóa</a>
+                        </div></div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="image/productdetail/nanoleaf3detail.jpg">
+                            <div>
+                                <p>Tên sản phẩm</p>
+                                <small>Giá : 5.650.000Đ</small>
+                                </div>
+                                <div class="remove-item">
+                                    <a href="">Xóa</a>
+                                </div>
+     
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>50.00</td>
+                </tr>
+            </table>
+            <div class="total-price">
+                <table>
+                    <tr>
+                        <td>Tổng</td>
+                        <td>10.000.000đ</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button-container">
+                <a href="payment.html">
+                    <button class="pay-btn">Thanh toán</button>
+                </a>                               
+                <button class="cancel-btn">Hủy <span class="tooltip">Lưu ý: Khi hủy sẽ xóa hết giỏ hàng</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/toggleMenu.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+@media (max-width: 991px) {
+    .rowDes{
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+    .rowDes .contentWrapper{
+        padding-left: 0;
+    }
+}
+@media (max-width: 768px){
+    .rowDes{
+        width: 90%;
+    }
+    .rowDes .contentWrapper h2{
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+    .rowDes .contentWrapper p{
+        line-height: 24px;
+    }
+@media (max-width: 575px){
+    .rowDes .contentWrapper span.textWrapper{
+        font-size: 28px;
+    }
+    .rowDes .contentWrapper h2{
+        font-size: 25px;
+    }
+    .rowDes .contentWrapper p{
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .rowDes .contentWrapper a{
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+}
+}
+/* Quy tắc responsive cho .welcome_container */
+@media (max-width: 1200px) {
+    .welcome_container {
+        height: 75vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+    .content_zone h1 {
+        font-size: 70px; /* Giảm kích thước chữ */
+        margin-bottom: 30px;
+    }
+    .content_zone a {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+/* welcome section */
+@media (max-width: 768px) {
+    .welcome_container {
+        height: 65vh;
+    }
+    .content_zone h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    .content_zone a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome_container {
+        height: 60vh;
+    }
+    .content_zone h1 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    .content_zone a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+@media (max-width: 412px) {
+    .welcome_container {
+        height: auto; /* Tự động điều chỉnh chiều cao */
+        padding: 20px;
+        position: relative; /* Đảm bảo video và nội dung khác nằm trong container */
+    }
+    .content_zone h1 {
+        font-size: 35px; /* Điều chỉnh kích thước font */
+    }
+    .content_zone a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    .background-video {
+        width: 100%; /* Video lấp đầy chiều rộng */
+        height: auto;
+        position: absolute; /* Giữ vị trí tuyệt đối */
+        top: 0;
+        left: 0;
+        z-index: -1; /* Đảm bảo video nằm phía sau nội dung */
+    }
+}
+/* Adjustments for medium-sized screens */
+@media (max-width: 1024px) {
+    .imageslider {
+        width: 600px; /* Thu nhỏ image slider */
+        height: 330px; /* Thu nhỏ chiều cao */
+    }
+
+    .imageslider .imageslider-item .imageslide-content h3 {
+        font-size: 24px; /* Giảm kích thước chữ */
+    }
+
+    .imageslider .imageslider-item .imageslide-content p {
+        font-size: 14px; /* Giảm kích thước chữ mô tả */
+    }
+
+    .slogan h2 {
+        font-size: 36px; /* Giảm kích thước chữ cho slogan */
+    }
+}
+
+/* Adjustments for smaller screens (e.g., tablets and smartphones) */
+@media (max-width: 768px) {
+    .imageslider {
+        width: 450px; /* Thu nhỏ image slider hơn nữa */
+        height: 250px;
+    }
+
+    .imageslider .imageslider-item .imageslide-content h3 {
+        font-size: 20px;
+    }
+
+    .imageslider .imageslider-item .imageslide-content p {
+        font-size: 12px;
+    }
+
+    .slogan h2 {
+        font-size: 28px;
+        line-height: 1.2; /* Đảm bảo dòng chữ không chiếm quá nhiều không gian */
+    }
+}
+
+/* Adjustments for very small screens (e.g., smartphones) */
+@media (max-width: 480px) {
+    .imageslider {
+        width: 300px; /* Thu nhỏ image slider để phù hợp với màn hình nhỏ */
+        height: 180px;
+    }
+
+    .imageslider .imageslider-item .imageslide-content h3 {
+        font-size: 16px;
+    }
+
+    .imageslider .imageslider-item .imageslide-content p {
+        font-size: 10px;
+    }
+
+    .slogan h2 {
+        font-size: 20px; /* Giảm kích thước chữ thêm nữa */
+        line-height: 1.1;
+        margin: 0 auto; /* Đảm bảo dòng chữ nằm gọn trong section */
+    }
+}
+@media (max-width:1080px){
+    .slogan h2 {
+        font-size: 30px;
+    }
+}
+/* Adjustments for medium-sized screens */
+@media (max-width: 1024px) {
+    .banner {
+        background-size: 100%; /* Tăng kích thước background lên một chút */
+    }
+}
+
+/* Adjustments for smaller screens (e.g., tablets and smartphones) */
+@media (max-width: 768px) {
+    .banner {
+        background-size: 80%; /* Tăng kích thước background hơn nữa trên màn hình nhỏ */
+    }
+}
+
+/* Adjustments for very small screens (e.g., smartphones) */
+@media (max-width: 480px) {
+    .banner {
+        background-size: contain;
+    }
+}
+
+/* Adjustments for very small screens (e.g., ultra-small smartphones) */
+@media (max-width: 420px) {
+    .banner {
+        background-size: 140%; /* Tăng kích thước background thêm chút nữa */
+    }
+}

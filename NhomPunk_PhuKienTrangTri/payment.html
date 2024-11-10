@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://kit.fontawesome.com/b04ac2903a.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet" />
+    <title>Giỏ Hàng</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html"><img style="width: 200px" src="image/controllerLogo.png" alt="" class="logo"></a>
+            <nav>
+                <ul class="links">
+                    <li><input type="text"><i class="fa-solid fa-magnifying-glass" style="color: #15e6b2"></i></li>
+                    <li><a class="active" href="cart.html">Giỏ hàng</a><i class="fa-solid fa-cart-shopping" style="color: #15e6b2"></i></li>
+                    <li><a href="store.html">Cửa hàng</a></li>
+                    <li><a href="login.html">Tài khoản</a></li>
+                    <li><a href="descriptionpage.html">Thông tin cửa hàng</a></li>
+                </ul>
+            </nav> 
+            <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="cart.html">Giỏ hàng</a><i class="fa-solid fa-cart-shopping" style="color: #15e6b2"></i></li>
+            <li><a href="order-history.html">Lịch sử đơn hàng</a></li>
+            <li><a href="login.html">Tài khoản</a></li>
+            <li><a href="descriptionpage.html">Thông tin cửa hàng</a></li>
+        </div>
+    </header>
+    <section id="alertZone">
+        <div class="alertBox hide">
+            <span class="fas fa-exclamation-circle"></span>
+            <span class="msg">Cảnh báo:Lỗi</span>
+            <span class="close-btn">
+                   <span class="fas fa-times"></span>
+            </span>
+        </div>
+    </section>
+    <div class="container">
+    <div class="banner">
+        <form id="payment-Form" action="payment.html" method="POST" class="payment-form">
+            <h2>Thông tin thanh toán</h2>
+            <div class="input-group">
+                <label for="name">Tên người nhận:</label>
+                <input type="text" id="name" name="name" placeholder="Nhập tên người nhận" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+            </div>
+            <div class="input-group">
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" name="address" placeholder="Nhập địa chỉ" required>
+            </div>
+            <div class="input-group">
+                <label for="payment-method">Chọn phương thức thanh toán:</label>
+                <select id="payment-method" name="payment-method" onchange="toggleBankDetails()" required>
+                    <option value="cash">Thanh toán tại nhà</option>
+                    <option value="onlineBanking">Ví điện tử</option>
+                    <option value="bank">Chuyển khoản ngân hàng</option>
+                </select>
+            </div>
+            <!--(ẩn khi chọn thanh toán tại nhà) -->
+            <div id="bank-details" class="payment-method-details" style="display: none;">
+                <div class="input-group">
+                    <label for="bank">Chọn ngân hàng:</label>
+                    <select id="bank" name="bank">
+                        <option value="vietcombank">Vietcombank</option>
+                        <option value="techcombank">Techcombank</option>
+                        <option value="vietinbank">Vietinbank</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="account">Số tài khoản:</label>
+                    <input type="text" id="account" name="account" placeholder="Nhập số tài khoản" required>
+                </div>
+                <div class="input-group">
+                    <label for="moneyNumber">Số tiền cần thanh toán : 10.000.000</label>
+                    <input type="text" id="moneyNumber" name="moneyNumber" placeholder="Nhập số tiền chuyển" required>
+                </div>
+               
+            </div>
+            <div id="online-details" class="payment-method-details" style="display: none;">
+                <div class="input-group">
+                    <label>Chọn ví điện tử</label>
+                    <button type="button" class="wallet-btn momo" onclick="showQRCode('momo')">MoMo</button>
+                    <button type="button" class="wallet-btn zalo" onclick="showQRCode('zalo')">ZaloPay</button>
+                </div>
+                <!-- QR code zone -->
+                <div id="qr-code-section" class="input-group" style="display: none;">
+                    <label>QR Code :</label>
+                    <img id="qr-code-img" src="" alt="QR Code" class="qr-img">
+                </div>
+            </div>
+            <button type="submit" class="pay-btn">Hoàn Tất Thanh Toán</button>
+        </form>
+    </div>
+</div>
+<script src="js/toggleMenu.js"></script>
+<script src="js/toggleBankDetails.js"></script>
+
+</body>
+</html>
